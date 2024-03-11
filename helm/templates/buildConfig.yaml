@@ -1,7 +1,7 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: target-custom-cudanotebook13-gitrepoincluded
+  name: target-custom-cudanotebook14-gitrepoincluded
   namespace: redhat-ods-applications
 spec:
   source:
@@ -19,7 +19,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: target-custom-cudanotebook13-gitrepoincluded:latest
+      name: target-custom-cudanotebook14-gitrepoincluded:latest
   triggers:
   - type: ImageChange
   - type: ConfigChange

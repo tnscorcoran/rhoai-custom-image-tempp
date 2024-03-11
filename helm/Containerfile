@@ -20,7 +20,7 @@ RUN cd /app/AIOps
 RUN ls -alh
 
 
-RUN cp /app/AIOps /opt/app-root/src
+RUN cp -r /app/AIOps /opt/app-root/src
 
 USER appuser
 
