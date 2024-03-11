@@ -1,7 +1,7 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: target-custom-cudanotebook14-gitrepoincluded
+  name: target-custom-cudanotebook15-gitrepoincluded
   namespace: redhat-ods-applications
 spec:
   lookupPolicy:

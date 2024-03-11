@@ -1,4 +1,5 @@
 FROM minimal-gpu:latest
+# FROM node:14
 
 COPY requirements.txt requirements.txt
 
@@ -16,11 +17,22 @@ RUN adduser appuser
 WORKDIR /app
 RUN git clone https://github.com/aspanner/AIOps
 
-RUN cd /app/AIOps
+# RUN cd /app/AIOps
+# WORKDIR /app
+# RUN echo "Current working directory: $(pwd)"
+# RUN ls -alh ./AIOps
+
+
+# RUN cp -r /app/AIOps /opt/app-root/src
+# COPY /app/AIOps /opt/app-root/src
+
+RUN mkdir  -p /opt/app-root/src/AIOps
+
+COPY . /opt/app-root/src/AIOps
+
+WORKDIR /opt/app-root/src
+RUN echo "Current working directory: $(pwd)"
 RUN ls -alh
-
-
-RUN cp -r /app/AIOps /opt/app-root/src
 
 USER appuser
 
