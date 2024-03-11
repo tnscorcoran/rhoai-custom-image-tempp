@@ -1,13 +1,13 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: target-custom-cuda-notebook3-gitrepoincluded
+  name: target-custom-cuda-notebook4-gitrepoincluded
   namespace: redhat-ods-applications
 spec:
   source:
     type: Git
     git:
-      uri: https://github.com/aspanner/rhoai-custom-image.git
+      uri: https://github.com/tnscorcoran/rhoai-custom-image-tempp.git
     contextDir: helm
   strategy:
     type: Docker                      
@@ -19,7 +19,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: target-custom-cuda-notebook3-gitrepoincluded:latest
+      name: target-custom-cuda-notebook4-gitrepoincluded:latest
   triggers:
   - type: ImageChange
   - type: ConfigChange
