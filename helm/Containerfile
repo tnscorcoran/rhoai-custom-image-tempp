@@ -8,6 +8,7 @@ ENV FORCE_CMAKE=1
 ENV BANANAS="ARE COOL"
 RUN pip install llama-cpp-python==0.2.39
 
+WORKDIR /opt/app-root/src
 RUN git clone https://github.com/aspanner/AIOps
 
 # RUN mv /AIOps /opt/app-root/src
