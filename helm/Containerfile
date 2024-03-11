@@ -8,7 +8,7 @@ ENV FORCE_CMAKE=1
 ENV BANANAS="ARE COOL"
 RUN pip install llama-cpp-python==0.2.39
 
-RUN adduser --disabled-password --gecos '' appuser
+RUN adduser appuser
 
 USER root
 WORKDIR /app
